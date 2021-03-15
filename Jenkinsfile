@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('clean & clone') { 
             steps {
-                sh "mvn clean compile"
+                sh "mvn compile"
                 
             }
         }
