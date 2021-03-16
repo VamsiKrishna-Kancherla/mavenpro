@@ -19,7 +19,7 @@ pipeline {
         }
 	 stage('docker image') {
             steps {
-                sh "docker buils -t vamsi1krishna/mavenpro_image:${BUILD_NUMBER}"
+                sh "docker build -t vamsi1krishna/mavenpro_image:${BUILD_NUMBER}"
             }
 	}
 	 stage('login') {
