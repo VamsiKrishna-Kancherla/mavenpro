@@ -17,9 +17,9 @@ pipeline {
                 sh "mvn package"
             }
         }
-	 stage('docker image') {
+	 stage('Build & Docker image') {
             steps {
-                sh "docker build -t vamsi1krishna/mavenpro_image:${BUILD_NUMBER}"
+                sh "docker build -t vamsi1krishna/mavenpro_image:${BUILD_NUMBER} ."
             }
 	}
 	 stage('login') {
